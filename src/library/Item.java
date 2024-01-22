@@ -26,13 +26,13 @@ public abstract class Item implements Comparable<Item> {
 
 	}
 
-	public void update(String newTitle, String newAuthor, int newYearReleased) {
+	public void updateItem(String newTitle, String newAuthor, int newYearReleased) {
 		setTitle(newTitle);
 		setAuthor(newAuthor);
 		setYearReleased(newYearReleased);
 	}
 
-	public int getItemid() {
+	public int getItemId() {
 		return itemId;
 	}
 

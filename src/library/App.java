@@ -27,11 +27,25 @@ public class App {
 
 		Library myLibrary = new Library();
 
-		myLibrary.add(new Book("Ulysses", "James Joyce", 1922, true, false));
-		myLibrary.add(new Book("Don Quixote", "Miguel de Cervantes", 1605, true, true));
+		myLibrary.addItem(new Book("Ulysses", "James Joyce", 1922, true, false));
+		myLibrary.addItem(new Book("Don Quixote", "Miguel de Cervantes", 1605, true, true));
+		myLibrary.addItem(lord);
+		myLibrary.addItem(power);
+		myLibrary.addItem(silent);
 		myLibrary.addPerson(new Person("Liliano", 35, 2005));
 		myLibrary.addPerson(new Person("Lucy", 36, 2016));
 		myLibrary.addPerson(new Person("Beatriz", 76, 1978));
+		myLibrary.addPerson(new Person("toRemove", 99, 9999));
+		myLibrary.addItem(new Magazine("Mistica Benfiquista", "monthly", 1995, true, true));
+		myLibrary.addItem(new Newspaper("A Bola", "football", 1945, false, true));
+
+		System.out.println(myLibrary);
+
+		myLibrary.updateItemById(6, "Ulysses the traveler", "James Augustine Joyce", 1922);
+		myLibrary.updatePersonById(1, "Liliano Balde", 36, 2010);
+		myLibrary.checkInById(2);
+		myLibrary.removePersonById(4);
+		myLibrary.removeItemById(3);
 
 		System.out.println(myLibrary);
 

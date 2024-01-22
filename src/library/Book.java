@@ -29,8 +29,9 @@ public class Book extends Item {
 
 	@Override
 	public String toString() {
-		return "Book [ID: " + getItemid() + ", TITLE: " + getTitle() + ", YEAR RELEASED: " + getYearReleased()
-				+ ", AUDIO BOOK: " + audioBook + ", Is it checked in? " + isItemCheckedOut() + "]";
+		return "Book [ItemID: " + getItemId() + ", TITLE: " + getTitle() + ", AUTHOR: " + getAuthor()
+				+ ", YEAR RELEASED: " + getYearReleased() + ", AUDIO BOOK: " + audioBook + ", Is it checked in? "
+				+ isItemCheckedOut() + "]";
 	}
 
 	@Override
