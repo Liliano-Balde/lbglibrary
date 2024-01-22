@@ -9,6 +9,7 @@ public class App {
 		System.out.println(lord);
 
 		lord.bookPhrase();
+
 	}
 
 }

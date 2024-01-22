@@ -1,26 +1,35 @@
 package library;
 
-public abstract class Item {
+public abstract class Item implements Comparable<Item> {
 
 	private static int itemCount = 1;
 	private int itemId;
 	private String title;
 	private String author;
 	private int yearReleased;
+	private boolean itemCheckedOut;
 
 	public Item() {
 		super();
-		this.itemId = ++itemCount;
+		this.itemId = itemCount++;
+		this.setItemCheckedOut(false);
 	}
 
-	public Item(String title, String author, int yearReleased) {
+	public Item(String title, String author, int yearReleased, boolean itemCheckedOut) {
 		super();
-		this.itemId = ++itemCount;
+		this.itemId = itemCount++;
 		this.setItemId(itemId);
 		this.setTitle(title);
 		this.setAuthor(author);
 		this.setYearReleased(yearReleased);
+		this.setItemCheckedOut(false);
 
+	}
+
+	public void update(String newTitle, String newAuthor, int newYearReleased) {
+		setTitle(newTitle);
+		setAuthor(newAuthor);
+		setYearReleased(newYearReleased);
 	}
 
 	public int getItemid() {
@@ -55,12 +64,12 @@ public abstract class Item {
 		this.yearReleased = yearReleased;
 	}
 
-	public static int getitemCount() {
-		return itemCount;
+	public boolean isItemCheckedOut() {
+		return itemCheckedOut;
 	}
 
-	public static void setItemCount(int itemCount) {
-		Item.itemCount = itemCount;
+	public void setItemCheckedOut(boolean itemCheckedOut) {
+		this.itemCheckedOut = itemCheckedOut;
 	}
 
 }
