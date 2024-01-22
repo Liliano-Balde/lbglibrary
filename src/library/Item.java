@@ -22,7 +22,7 @@ public abstract class Item implements Comparable<Item> {
 		this.setTitle(title);
 		this.setAuthor(author);
 		this.setYearReleased(yearReleased);
-		this.setItemCheckedOut(false);
+		this.setItemCheckedOut(itemCheckedOut);
 
 	}
 

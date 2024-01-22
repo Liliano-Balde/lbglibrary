@@ -40,4 +40,9 @@ public class Person {
 		this.yearRegistered = yearRegistered;
 	}
 
+	@Override
+	public String toString() {
+		return "Person [personId=" + personId + ", name=" + name + ", yearRegistered=" + yearRegistered + "]";
+	}
+
 }

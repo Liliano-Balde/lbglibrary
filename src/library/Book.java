@@ -4,9 +4,9 @@ public class Book extends Item {
 
 	private boolean audioBook;
 
-	public Book(String title, String author, int yearReleased, boolean audioBook) {
+	public Book(String title, String author, int yearReleased, boolean audioBook, boolean isItemCheckedOut) {
 //		added attributes to super so it brings the values implemented on app
-		super(title, author, yearReleased, false);
+		super(title, author, yearReleased, isItemCheckedOut);
 		this.audioBook = audioBook;
 	}
 
