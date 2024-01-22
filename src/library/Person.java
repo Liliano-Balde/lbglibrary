@@ -5,6 +5,7 @@ public class Person {
 	private static int personCount = 1;
 	private int personId;
 	private String name;
+	private int age;
 	private int yearRegistered;
 
 	public Person() {
@@ -13,10 +14,11 @@ public class Person {
 		this.setYearRegistered(yearRegistered);
 	}
 
-	public Person(String name, int yearRegistered) {
+	public Person(String name, int age, int yearRegistered) {
 		super();
-		this.setName(name);
 		this.personId = personCount++;
+		this.setName(name);
+		this.setAge(age);
 		this.setYearRegistered(yearRegistered);
 	}
 
@@ -26,6 +28,14 @@ public class Person {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 
 	public int getPersonId() {
@@ -42,7 +52,8 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [personId=" + personId + ", name=" + name + ", yearRegistered=" + yearRegistered + "]";
+		return "Person [UserId=" + personId + ", name=" + name + ", age=" + age + ", Year registered=" + yearRegistered
+				+ "]";
 	}
 
 }

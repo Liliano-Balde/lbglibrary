@@ -2,7 +2,7 @@ package library;
 
 import java.util.ArrayList;
 
-public class LibraryIventory {
+public class Library {
 
 	private ArrayList<Item> items = new ArrayList<>();
 	private ArrayList<Person> persons = new ArrayList<>();
@@ -24,11 +24,11 @@ public class LibraryIventory {
 		item.setItemCheckedOut(false);
 	}
 
-	public void add(Person person) {
+	public void addPerson(Person person) {
 		persons.add(person);
 	}
 
-	public void remove(Person person) {
+	public void removePerson(Person person) {
 		persons.remove(person);
 	}
 
@@ -41,6 +41,11 @@ public class LibraryIventory {
 			}
 		}
 
+	}
+
+	@Override
+	public String toString() {
+		return "Library [items=" + items + "]\n[person=" + persons + "]";
 	}
 
 }

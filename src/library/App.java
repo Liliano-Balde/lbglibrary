@@ -22,7 +22,18 @@ public class App {
 
 		items.add(new Book("Ulysses", "James Joyce", 1922, true, false));
 		items.add(new Book("Don Quixote", "Miguel de Cervantes", 1605, true, true));
+
 		System.out.println(items);
+
+		Library myLibrary = new Library();
+
+		myLibrary.add(new Book("Ulysses", "James Joyce", 1922, true, false));
+		myLibrary.add(new Book("Don Quixote", "Miguel de Cervantes", 1605, true, true));
+		myLibrary.addPerson(new Person("Liliano", 35, 2005));
+		myLibrary.addPerson(new Person("Lucy", 36, 2016));
+		myLibrary.addPerson(new Person("Beatriz", 76, 1978));
+
+		System.out.println(myLibrary);
 
 	}
 
